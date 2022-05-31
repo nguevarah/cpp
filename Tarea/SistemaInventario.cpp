@@ -4,35 +4,31 @@
 using namespace std;
 
 string productos[5][3] = {
-
     { "001", "iPhone X", "0" },
     { "002", "Laptop Dell", "5" },
     { "003", "Monitor Samsung", "2" },
     { "004", "Mouse", "100" },
     { "005", "HeadSet", "25" }
-
 };
 
 void listarProductos() {
     system("cls");
     cout << endl;
     cout << "Listado de Productos" << endl;
-    cout << "********" << endl;
+    cout << "********************" << endl;
     cout << "Codigo, Descripcion y Existencia" << endl;
 
     for (int i = 0; i < 5; i++)
     {
         cout << productos[i][0] << " | " << productos[i][1] << " | " << productos[i][2] << endl;
-
     }
 }
 
-void movimientoInventario(string codigo, int cantidad, string tipoMovimiento){
-
+void movimientoInventario(string codigo, int cantidad, string tipoMovimiento) {
     for (int i = 0; i < 5; i++)
     {
-        if (productos[i][0] == codigo){
-            if (tipoMovimiento == "+"){
+        if (productos[i][0] == codigo) {
+            if (tipoMovimiento == "+") {
                 productos[i][2] = to_string(stoi(productos[i][2]) + cantidad);
             } else {
                 productos[i][2] = to_string(stoi(productos[i][2]) - cantidad);
@@ -41,22 +37,17 @@ void movimientoInventario(string codigo, int cantidad, string tipoMovimiento){
     }
 }
 
-void ingresoDeInventario(){
-
+void ingresoDeInventario() {
     string codigo = "";
     int cantidad = 0;
-            }
-        }
-    }
-}
+
     system("cls");
     cout << endl;
     cout << "Ingreso de Productos al Inventario" << endl;
-    cout << "************" << endl;
+    cout << "**********************************" << endl;
     cout << "Ingrese el codigo del producto: ";
     cin >> codigo;
     cout << endl;
-
     cout << "Ingrese la cantidad del producto: ";
     cin >> cantidad;
     cout << endl;
@@ -71,7 +62,7 @@ void salidaDeInventario() {
     system("cls");
     cout << endl;
     cout << "Salida de Productos del Inventario" << endl;
-    cout << "************" << endl;
+    cout << "**********************************" << endl;
     cout << "Ingrese el codigo del producto: ";
     cin >> codigo;
     cout << endl;
@@ -85,11 +76,13 @@ void salidaDeInventario() {
 int main(int argc, char const *argv[])
 {
     int opcion = 0;
+
     while(true) {
         system("cls");
+
         cout << "Sistema de Inventario"; 
         cout << endl;
-        cout << "*******";
+        cout << "*********************";
         cout << endl;
         cout << endl;
         cout << "1 - Productos" << endl;
@@ -110,17 +103,20 @@ int main(int argc, char const *argv[])
         case 3:
             salidaDeInventario();
             break;
+        
         default:
             break;
         }
-        
+
         system("pause");
         cout << endl;
 
         if (opcion == 0) {
-
             break;
         }
     }
 
+ 
+
     return 0;
+}
