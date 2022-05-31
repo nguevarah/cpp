@@ -55,6 +55,24 @@ void ingresoDeInventario() {
     movimientoInventario(codigo, cantidad, "+");
 }
 
+void ajusteDeInventarioPositivo() {
+    string codigo = "";
+    int cantidad = 0;
+
+    system("cls");
+    cout << endl;
+    cout << "Ajuste Positivo de Productos al Inventario" << endl;
+    cout << "******************************************" << endl;
+    cout << "Ingrese el codigo del producto: ";
+    cin >> codigo;
+    cout << endl;
+    cout << "Ingrese la cantidad del producto: ";
+    cin >> cantidad;
+    cout << endl;
+
+    movimientoInventario(codigo, cantidad, "+");
+}
+
 void salidaDeInventario() {
     string codigo = "";
     int cantidad = 0;
@@ -63,6 +81,24 @@ void salidaDeInventario() {
     cout << endl;
     cout << "Salida de Productos del Inventario" << endl;
     cout << "**********************************" << endl;
+    cout << "Ingrese el codigo del producto: ";
+    cin >> codigo;
+    cout << endl;
+    cout << "Ingrese la cantidad del producto: ";
+    cin >> cantidad;
+    cout << endl;
+
+    movimientoInventario(codigo, cantidad, "-");
+}
+
+void ajusteDeInventarioNegativo() {
+    string codigo = "";
+    int cantidad = 0;
+
+    system("cls");
+    cout << endl;
+    cout << "Ajuste Negativo de Productos del Inventario" << endl;
+    cout << "*******************************************" << endl;
     cout << "Ingrese el codigo del producto: ";
     cin >> codigo;
     cout << endl;
@@ -88,6 +124,8 @@ int main(int argc, char const *argv[])
         cout << "1 - Productos" << endl;
         cout << "2 - Ingreso de Inventario" << endl;
         cout << "3 - Salida de Inventario" << endl;
+        cout << "4 - Ajuste Positivo" << endl;
+        cout << "5 - Ajuste Negativo" << endl;
         cout << "0 - Salir" << endl;
         cout << "Ingrese una opcion del menu: ";
         cin >> opcion;
@@ -103,7 +141,13 @@ int main(int argc, char const *argv[])
         case 3:
             salidaDeInventario();
             break;
-        
+        case 4:
+            ajusteDeInventarioPositivo();
+            break;
+        case 5:
+            ajusteDeInventarioNegativo();
+            break;
+
         default:
             break;
         }
@@ -115,8 +159,6 @@ int main(int argc, char const *argv[])
             break;
         }
     }
-
- 
 
     return 0;
 }
