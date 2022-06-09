@@ -20,27 +20,38 @@
         cout << " Ingrese una opcion del Menu " << endl;
         cin >> opcion;
 
-        if (opcion == 1)
-        {
-            system("cls");
-            cout << "Estas en el Menu de Cafe y Granitas" << endl;
-            system ("pause");
-        }
-
-        if (opcion == 2)
-        {
-            system("cls");
-            cout << "Estas en el Menu de Reposteria" << endl;
-            system ("pause");
-        }
-        
-        if (opcion == 0)
-        {
+        if (opcion == 0){
             break;
+        }
+        switch (opcion)
+        {
+            case 1:
+            {
+                system("cls");
+                cout << "Estas en el Menu de Cafe y Granitas" << endl;
+                system ("pause");
+                break;
+
+            }      
+            case 2:
+            {
+                system("cls");
+                cout << "Estas en el Menu Reposteria" << endl;
+                system ("pause");
+                break;
+            }
+            
+            default:
+            {
+                cout << endl;
+                cout << " Ingrese una opcion valida 0, 1, 2" << endl;
+                system("pause");
+                break;
+            }     
         }
     }
     cout << endl;
-    cout << "Salistes del sistema";
+    cout << " Salistes del sistema ";
     
      return 0;
  }
