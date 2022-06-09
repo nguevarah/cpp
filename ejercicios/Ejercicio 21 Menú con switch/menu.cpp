@@ -33,8 +33,7 @@
             cout << "Estas en el Menu de Reposteria" << endl;
             system ("pause");
         }
-        
-        if (opcion == 0)
+           if (opcion == 0)
         {
             break;
         }
