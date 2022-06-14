@@ -23,6 +23,8 @@ int main(int argc, char const *argv[])
     cin >> opcion;
 
     system("cls");
+    
+    // primera forma de hacerlo
 
     if (opcion == 1)
     {
@@ -37,6 +39,22 @@ int main(int argc, char const *argv[])
         {
             cout << " Error! Recuerda ingresar una de las opciones del menu ";
         }
-   
+
+    // segunda forma de hacerlo
+    /*
+    switch (opcion)
+    {
+    case 1:
+        starShip();
+        break;
+    case 2:
+        snake();
+        break;
+    
+    default:
+        cout << " Error! Recuerda ingresar una de las opciones del menu ";
+        break;
+    }
+   */
     return 0;
 }
